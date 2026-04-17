@@ -63,6 +63,25 @@ p {
   z-index: 1000;
 }
 
+section::before,
+section::after,
+.about-card::before,
+.services::before,
+.services-detail::before,
+.trust::before {
+  pointer-events: none;
+}
+
+.hero-content,
+.container,
+.service-row,
+.service-card,
+.about-text,
+.final-cta {
+  position: relative;
+  z-index: 10;
+}
+
 .header::before {
   content: "";
   position: absolute;
@@ -1605,7 +1624,6 @@ footer {
     margin-bottom: 40px;
   }
 
-  .services-grid,
   .trust-grid,
   .process-grid {
     gap: 25px;
@@ -1618,9 +1636,20 @@ footer {
     text-align: center;
   }
 
+
   .cta-btn {
     width: 100%;
     margin-top: 10px;
+  }
+
+  .header .cta-btn {
+    width: auto;
+    margin-top: 0;
+    padding: 8px 16px;
+  }
+
+  .nav-container {
+    padding: 0 10px;
   }
 
   .nav {
@@ -1647,10 +1676,47 @@ footer {
     height: 65px;
   }
 
+  .services-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 35px; /* increase vertical space */
+    margin-top: 35px;
+  }
 
   .service-card {
+    width: 100%;
     max-width: 100%;
+    padding: 25px;
+    border: 1px solid rgba(168, 85, 247, 0.2);
   }
+
+  .services h2 {
+    margin-bottom: 10px;
+  }
+    
+  .about-grid {
+    flex-direction: column;
+    gap: 30px; /* reduce and normalize */
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-text h2 {
+    margin-bottom: 15px;
+  }
+
+  .about-text p {
+    margin-bottom: 15px;
+  }
+
+  .about-visual {
+    width: 100%;
+    height: 220px; /* KEY FIX */
+    border-radius: 15px;
+  }
+
 }
 
 
