@@ -7,7 +7,6 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
 </head>
 <body>
 
@@ -28,10 +27,28 @@
         <a href="contact.html">Contact</a>
       </nav>
 
+      <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+
+
       <a href="contact.html" class="cta-btn">Contact Us</a>
 
     </div>
   </header>
+
+<!------------------- mobile menu -------------------->
+
+<div class="mobile-menu" id="mobileMenu">
+
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+
+</div>
 
 
 <!------------------- HERO -------------------->
@@ -202,7 +219,10 @@
 
       <div class="footer-col">
         <h4>Contact</h4>
-        <p>📩 For quotes and inquiries use our contact form.</p>
+        <p>
+        📩 For quotes and inquiries use our 
+        <a href="contact.html" class="footer-link">contact form</a>
+        </p>
         <p>✉️ stealthlabsllc@gmail.com</p>
         <p>📞 (615) 916-0166</p>
         <p>📍 Tennessee, USA</p>
@@ -216,5 +236,8 @@
 
   </footer>
 
+  <a href="contact.html" class="mobile-cta"> Build My System </a>
+  <script src="script.js"></script>
+  
 </body>
 </html>

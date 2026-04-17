@@ -27,22 +27,23 @@
       <a href="contact.html" class="active">Contact</a>
     </nav>
 
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
     <a href="contact.html" class="cta-btn">Contact Us</a>
 
   </div>
 </header>
 
-<!------------------- INTRO -------------------->
-<section class="contact-intro">
-
-  <div class="container">
-    <h1>Let’s build something that actually works.</h1>
-    <p>Tell us about your business and we’ll create a system designed to grow it.</p>
-  </div>
-
-</section>
-
-<div class="divider"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
 
 <!------------------- FORM SECTION -------------------->
 <section class="contact-form-section">
@@ -55,7 +56,7 @@
       <div class="form-embed">
         <iframe
             src="https://api.leadconnectorhq.com/widget/form/JsGNlDTcCPFhpvJPXwkm"
-            style="width:100%;height:500px;border:none;border-radius:8px"
+            style="width:100%;height:600px;border:none;border-radius:12px"
             id="inline-JsGNlDTcCPFhpvJPXwkm" 
             data-layout="{'id':'INLINE'}"
             data-trigger-type="alwaysShow"
@@ -65,13 +66,13 @@
             data-deactivation-type="neverDeactivate"
             data-deactivation-value=""
             data-form-name="Form 0"
-            data-height="434"
+            data-height="541"
             data-layout-iframe-id="inline-JsGNlDTcCPFhpvJPXwkm"
             data-form-id="JsGNlDTcCPFhpvJPXwkm"
             title="Form 0"
                 >
         </iframe>
-        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+        
       </div>
 
     </div>
@@ -129,7 +130,10 @@
 
       <div class="footer-col">
         <h4>Contact</h4>
-        <p>📩 For quotes and inquiries use our contact form.</p>
+        <p>
+        📩 For quotes and inquiries use our 
+        <a href="contact.html" class="footer-link">contact form</a>
+        </p>
         <p>✉️ stealthlabsllc@gmail.com</p>
         <p>📞 (615) 916-0166</p>
         <p>📍 Tennessee, USA</p>
@@ -142,6 +146,9 @@
     </div>
 
   </footer>
+
+    <script src="script.js"></script>
+    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
 </body>
 </html>
