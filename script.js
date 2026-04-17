@@ -32,3 +32,7 @@ const mobileMenu = document.getElementById("mobileMenu");
 hamburger.addEventListener("click", () => {
   mobileMenu.classList.toggle("active");
 });
+
+window.addEventListener("scroll", () => {
+  document.querySelector(".header").classList.toggle("scrolled", window.scrollY > 50);
+});
