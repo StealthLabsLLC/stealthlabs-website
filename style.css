@@ -55,7 +55,7 @@ body {
 .nav-container {
   position: relative;
   z-index: 1;
-
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -188,8 +188,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 120%;
-  height: 120%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   transform: translate(-50%, -50%);
   z-index: 0;
@@ -602,17 +602,6 @@ color: transparent;
   overflow: hidden;
 }
 
-/* VIDEO */
-.bg-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120%;
-  height: 120%;
-  object-fit: cover;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-}
 
 /* DARK OVERLAY */
 .video-overlay {
@@ -1838,4 +1827,20 @@ body {
     display: none;
   }
 
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .image-break {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 10px 0;
+  }
 }
