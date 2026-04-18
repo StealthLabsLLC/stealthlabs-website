@@ -36,3 +36,12 @@ hamburger.addEventListener("click", () => {
 window.addEventListener("scroll", () => {
   document.querySelector(".header").classList.toggle("scrolled", window.scrollY > 50);
 });
+
+const pricing = document.querySelector('.pricing');
+
+window.addEventListener('scroll', () => {
+  const rect = pricing.getBoundingClientRect();
+  if (rect.top < window.innerHeight - 100) {
+    pricing.classList.add('show');
+  }
+});
