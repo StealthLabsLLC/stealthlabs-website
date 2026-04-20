@@ -1454,7 +1454,12 @@ color: transparent;
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 14px;
-
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: auto;
+  line-height: 1;
   box-shadow: 0 0 20px rgba(168,85,247,0.6);
 }
 
@@ -1740,6 +1745,11 @@ footer {
   gap: 40px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.pricing-guarantee {
+  margin-top: 40px;
+  text-align: center;
 }
 
 .features {
