@@ -1307,11 +1307,13 @@ color: transparent;
   flex-direction: column;
   gap: 25px; /* THIS is the cleanest fix */
   overflow: visible;
-
+  width: 100%;
   max-width: 700px;
   margin: 0 auto;
   padding: 40px;
   border-radius: 20px;
+  word-break: normal;
+  overflow-wrap: break-word;
 
   background: linear-gradient(145deg, #111, #0d0d0d);
   border: 1px solid rgba(168,85,247,0.15);
@@ -1337,7 +1339,7 @@ color: transparent;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .form-embed iframe {
@@ -2016,6 +2018,11 @@ footer {
     margin-bottom: 40px;
   }
 
+    .contact-form-section .container {
+    padding: 0 10px;
+  }
+
+
   .trust-grid,
   .process-grid {
     gap: 35px;
@@ -2028,20 +2035,29 @@ footer {
     text-align: center;
   }
 
+    .form-card {
+    max-width: 100%;
+    padding: 20px 15px;
+  }
+
 
   .cta-btn {
     width: 100%;
     min-width: 180px;
   }
 
-  .header .cta-btn {
-    width: auto;
-    margin-top: 0;
-    padding: 8px 18px;
+   .header .cta-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 18px;
+
+    box-shadow: none; /* reduces visual weight */
+    animation: none;  /* stops pulsing (important) */
   }
 
   .nav-container {
     padding: 0 10px;
+    gap: 6px;
   }
 
   .nav {
@@ -2211,7 +2227,7 @@ footer {
   }
 
   .logo-wrap {
-    gap: 8px;
+    gap: 6px;
   }
 
   .logo img {
