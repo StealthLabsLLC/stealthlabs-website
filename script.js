@@ -86,3 +86,10 @@ if (strip) {
 
   stripObserver.observe(strip);
 }
+
+hamburger.addEventListener("click", () => {
+  mobileMenu.classList.toggle("active");
+  document.body.classList.toggle("menu-open");
+});
+
+hamburger.classList.toggle("active");
