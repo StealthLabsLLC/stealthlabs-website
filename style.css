@@ -181,7 +181,7 @@ section::after,
 
 .header.scrolled {
   background: rgba(10, 10, 10, 0.8);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(12px);
 }
 
 
@@ -250,6 +250,7 @@ section::after,
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 15px;
 }
 
 /* SMOOTH FADE INTO NEXT SECTION */
@@ -323,7 +324,7 @@ section::after,
   padding: 100px 40px 50px;  
 
   background: transparent;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(12px);
 
   border-top: 1px solid rgba(168, 85, 247, 0.2);
   z-index: 2;
@@ -1311,12 +1312,13 @@ color: transparent;
 .mobile-menu {
   position: fixed;
   top: 0;
-  right: -100%;
   width: 100%;
   height: 100vh;
-
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  will-change: transform;
   background: rgba(10, 10, 10, 0.95);
-  backdrop-filter: blur(20px);
+  backdrop-filter: none;
 
   display: flex;
   flex-direction: column;
@@ -1324,12 +1326,12 @@ color: transparent;
   justify-content: center;
   gap: 25px;
 
-  transition: right 0.4s ease;
+
   z-index: 999;
 }
 
 .mobile-menu.active {
-  right: 0;
+  transform: translateX(0);
 }
 
 .mobile-menu.active a {
@@ -1345,9 +1347,9 @@ color: transparent;
   text-decoration: none;
   letter-spacing: 0.5px;
 
-  transition: all 0.3s ease;
+  transition: none;
   opacity: 0;
-  transform: translateY(20px);
+  transform: none;
 }
 
 .mobile-menu a:hover {
@@ -1989,6 +1991,10 @@ a:hover {
     padding: 0 10px;
   }
 
+   section {
+    padding: 50px 15px !important;
+  }
+
   .hero-video {
     min-height: calc(100vh - 65px);
     height: 80vh;
@@ -2000,33 +2006,24 @@ a:hover {
     margin-bottom: 40px;
   }
 
-
-  .booking-section {
-    padding: 20px 12px;
-  }
-
   .booking-card {
-    margin: 20px auto;
-    padding: 14px;
-    border-radius: 14px;
+    max-width: 100%;
+    margin: 30px auto;       /* less vertical space */
+    padding: 0 10px;         /* keeps content off edges */
+    text-align: center;
   }
 
   .booking-title {
-    font-size: 16px;
-    line-height: 1.4;
     margin-bottom: 12px;
+    font-size: 18px;         /* scales down nicely */
+    line-height: 1.4;
   }
 
   .booking-note {
-    font-size: 11px;
     margin-top: 10px;
+    font-size: 11px;
+    color: #999;             /* slightly softer */
   }
-
-  /* iframe breathing room */
-  .booking-card iframe {
-    border-radius: 10px;
-  }
-
 
   .trust-grid,
   .process-grid {
@@ -2055,6 +2052,11 @@ a:hover {
     justify-content: space-between;
     gap: 8px;
     padding: 12px 18px;
+  }
+
+  .hero-video {
+    height: 70vh;
+    min-height: 500px;
   }
 
   .nav {
