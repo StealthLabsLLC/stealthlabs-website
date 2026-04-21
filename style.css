@@ -1808,7 +1808,10 @@ footer {
   border: 1px solid rgba(168,85,247,0.2);
 
   box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
+}
+
+* {
+  outline: 1px solid rgba(255,0,0,0.2);
 }
 
 .booking-card::before {
@@ -1843,6 +1846,7 @@ footer {
   width: 100%;
   border: none;
   display: block;
+  pointer-events: auto;
 }
 
 .container,
