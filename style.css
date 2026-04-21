@@ -2067,7 +2067,7 @@ a:hover {
     display: flex;
   }
  
-    .booking-section,
+  .booking-section,
   .booking-card {
     position: relative;
     z-index: 1;
@@ -2085,6 +2085,11 @@ a:hover {
     transition: none !important;
   }
 
+    .booking-card iframe {
+    height: 600px;       /* 👈 key fix */
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 
   .services-grid {
     display: flex;
