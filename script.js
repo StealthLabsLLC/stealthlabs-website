@@ -132,15 +132,10 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+const videos = document.querySelectorAll("video");
 
-document.addEventListener("DOMContentLoaded", () => {
-  const videos = document.querySelectorAll("video");
-
-  videos.forEach(video => {
-    video.muted = true;
-    video.play().catch(() => {
-      // fallback if autoplay is blocked
-      console.log("Autoplay blocked, waiting for interaction");
-    });
+videos.forEach(video => {
+  video.play().catch(() => {
+    // mobile blocked it
   });
 });
