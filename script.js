@@ -131,11 +131,3 @@ document.addEventListener("keydown", (e) => {
     document.body.classList.remove("menu-open");
   }
 });
-
-const videos = document.querySelectorAll("video");
-
-videos.forEach(video => {
-  video.play().catch(() => {
-    // mobile blocked it
-  });
-});
