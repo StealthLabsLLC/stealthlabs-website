@@ -1837,12 +1837,15 @@ footer {
   width: 100%;
   position: relative;
   z-index: 3;
+  height: auto;
 }
 
 .booking-embed iframe {
   width: 100%;
   position: relative;
+  min-height: 650px;
   z-index: 4;
+  display: block;
 }
 
 /* TITLE */
