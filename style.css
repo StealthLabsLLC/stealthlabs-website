@@ -1803,6 +1803,7 @@ footer {
   border-radius: 20px;
   background: radial-gradient(circle at top, rgba(168,85,247,0.15), transparent 70%);
   z-index: 0;
+  pointer-events: none;
 }
 
 .booking-card {
@@ -1836,6 +1837,13 @@ footer {
 
 .booking-embed {
   width: 100%;
+  z-index: 5;
+  position: relative;
+}
+
+.booking-embed iframe {
+  position: relative;
+  z-index: 10;
 }
 
 .booking-card * {
