@@ -2006,25 +2006,6 @@ a:hover {
     margin-bottom: 40px;
   }
 
-  .booking-card {
-    max-width: 100%;
-    margin: 30px auto;       /* less vertical space */
-    padding: 0 10px;         /* keeps content off edges */
-    text-align: center;
-  }
-
-  .booking-title {
-    margin-bottom: 12px;
-    font-size: 18px;         /* scales down nicely */
-    line-height: 1.4;
-  }
-
-  .booking-note {
-    margin-top: 10px;
-    font-size: 11px;
-    color: #999;             /* slightly softer */
-  }
-
   .trust-grid,
   .process-grid {
     gap: 35px;
@@ -2066,12 +2047,6 @@ a:hover {
   .hamburger {
     display: flex;
   }
- 
-  .booking-section,
-  .booking-card {
-    position: relative;
-    z-index: 1;
-  }
 
   .footer-col:not(:last-child) {
     text-align: center;
@@ -2083,12 +2058,6 @@ a:hover {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
-  }
-
-    .booking-card iframe {
-    height: 600px;       /* 👈 key fix */
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
   }
 
   .services-grid {
@@ -2259,5 +2228,23 @@ a:hover {
     box-shadow:
       0 15px 40px rgba(0,0,0,0.6),
       0 0 30px rgba(168,85,247,0.4);
+  }
+
+    .booking-card {
+    max-width: 100%;
+    margin: 30px auto;
+    text-align: center;
+  }
+
+  .booking-title {
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .booking-note {
+    margin-top: 10px;
+    font-size: 11px;
+    color: #999;
   }
 }
