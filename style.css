@@ -1837,13 +1837,13 @@ footer {
   width: 100%;
   position: relative;
   z-index: 3;
-  height: 700px;
 }
 
 .booking-embed iframe {
   width: 100%;
   border: none;
   display: block;
+  min-height: 700px;
 }
 
 /* TITLE */
