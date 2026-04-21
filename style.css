@@ -1796,22 +1796,12 @@ footer {
   border: 1px solid rgba(168,85,247,0.5);
 }
 
-.booking-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 20px;
-  background: radial-gradient(circle at top, rgba(168,85,247,0.15), transparent 70%);
-  z-index: 0;
-  pointer-events: none;
-}
-
 .booking-card {
   max-width: 700px;
   margin: 0 auto;
+  position: relative;
 
   padding: 30px;
-
   border-radius: 20px;
 
   background: rgba(168,85,247,0.05);
@@ -1819,36 +1809,40 @@ footer {
 
   box-shadow: 0 20px 60px rgba(0,0,0,0.6);
   backdrop-filter: blur(10px);
-  position: relative;
 }
 
-.booking-title {
-  text-align: center;
-  font-size: 26px;
-  margin-bottom: 10px;
+.booking-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+
+  background: radial-gradient(
+    circle at top,
+    rgba(168,85,247,0.15),
+    transparent 70%
+  );
+
+  z-index: 0;
+  pointer-events: none;
 }
 
+.booking-title,
 .booking-subtext {
-  text-align: center;
-  font-size: 14px;
-  color: #aaa;
-  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
 }
 
 .booking-embed {
   width: 100%;
-  z-index: 5;
   position: relative;
+  z-index: 3;
 }
 
 .booking-embed iframe {
+  width: 100%;
   position: relative;
-  z-index: 10;
-}
-
-.booking-card * {
-  position: relative;
-  z-index: 1;
+  z-index: 4;
 }
 
 /* TITLE */
