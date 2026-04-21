@@ -1402,7 +1402,6 @@ body.menu-open {
   position: relative;
 }
 
-
 /* UNDERLINE ANIMATION */
 .footer-link::after {
   content: "";
@@ -1424,16 +1423,13 @@ body.menu-open {
   width: 100%;
 }
 
-
 .video-box video {
   pointer-events: none;
 }
 
-
 .footer-link {
   text-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
 }
-
 
 /* FOCUS (KEY FOR UX) */
 .cta-btn {
@@ -1792,6 +1788,13 @@ a:hover {
   margin-top: 12px;
   font-size: 12px;
   color: #888;
+}
+
+.hero-video video,
+.hero-video iframe {
+  position: relative;
+  z-index: 5;
+  pointer-events: auto;
 }
 
 .booking-card iframe {
