@@ -131,3 +131,12 @@ document.addEventListener("keydown", (e) => {
     document.body.classList.remove("menu-open");
   }
 });
+
+window.addEventListener("message", function(event) {
+  if (event.data && event.data.type === "iframeHeight") {
+    const iframe = document.getElementById("bookingFrame");
+    if (iframe) {
+      iframe.style.height = event.data.height + "px";
+    }
+  }
+});

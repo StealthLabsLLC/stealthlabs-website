@@ -1843,7 +1843,12 @@ footer {
   width: 100%;
   border: none;
   display: block;
-  min-height: 700px;
+}
+
+.container,
+.booking-section,
+.booking-card {
+  overflow: visible;
 }
 
 /* TITLE */
