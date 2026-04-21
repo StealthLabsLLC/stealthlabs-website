@@ -2258,4 +2258,9 @@ a:hover {
     font-size: 11px;
     color: #999;
   }
+
+  .booking-card iframe {
+    height: auto;
+    min-height: 85vh; /* 👈 important */
+  }
 }
