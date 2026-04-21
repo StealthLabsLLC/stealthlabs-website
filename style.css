@@ -1993,246 +1993,201 @@ a:hover {
 }
 
 /* =========================
-   MOBILE SYSTEM (UNDER 768px)
+   MOBILE FIX SYSTEM (FINAL)
 ========================= */
 @media (max-width: 768px) {
 
   /* =========================
-     GLOBAL
+     GLOBAL FIXES
   ========================= */
   body {
-    font-size: 14px;
-  }
-
-  section {
-    padding: 50px 15px !important;
+    overflow-x: hidden;
   }
 
   .container {
-    padding: 0 15px;
+    padding: 0 16px !important;
   }
 
-  h1 { font-size: 26px; }
-  h2 { font-size: 22px; }
-  p  { font-size: 14px; }
+  section {
+    padding: 50px 16px !important;
+  }
+
+  h1 { font-size: 26px !important; }
+  h2 { font-size: 22px !important; }
 
   /* =========================
-     HEADER / NAV
+     HEADER / NAV (BIG FIX)
   ========================= */
   .nav {
-    display: none;
-  }
-
-  .nav-container {
-    padding: 12px 18px;
-  }
-
-  .logo img {
-    height: 40px;
-  }
-
-  .logo-text {
-    font-size: 14px;
+    display: none !important;
   }
 
   .hamburger {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    display: flex !important;
   }
 
-  .hamburger span {
-    width: 25px;
-    height: 3px;
-    background: white;
+  .nav-container {
+    padding: 12px 16px !important;
+  }
+
+  .logo img {
+    height: 42px !important;
+  }
+
+  .logo-text {
+    font-size: 14px !important;
   }
 
   /* =========================
-     MOBILE MENU
+     MOBILE MENU FIX
   ========================= */
   .mobile-menu {
-    position: fixed;
-    inset: 0;
-    background: rgba(10,10,10,0.98);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    z-index: 999;
-  }
-
-  .mobile-menu.active {
-    transform: translateX(0);
-  }
-
-  .mobile-menu a {
-    font-size: 22px;
-    color: #e5e5e5;
-    text-decoration: none;
+    z-index: 9999 !important;
   }
 
   /* =========================
-     HERO
+     HERO (CRITICAL FIX)
   ========================= */
   .hero-video {
-    height: 75vh;
-    min-height: 450px;
+    height: 75vh !important;
+    min-height: 420px !important;
   }
 
   .hero-content {
-    padding: 20px;
+    padding: 20px !important;
   }
 
   .hero-content h1 {
-    font-size: 26px;
-    line-height: 1.2;
+    font-size: 26px !important;
   }
 
   .hero-content p {
-    font-size: 14px;
-    max-width: 90%;
+    font-size: 14px !important;
+    max-width: 90% !important;
+    margin: 0 auto 20px !important;
   }
 
   /* =========================
-     VIDEO BREAK
+     VIDEO BREAK FIX
   ========================= */
   .video-break {
-    height: 60vh;
-    min-height: 350px;
+    height: 60vh !important;
+    min-height: 320px !important;
   }
 
   .video-content h2 {
-    font-size: 24px;
+    font-size: 24px !important;
     max-width: 90%;
     margin: 0 auto;
   }
 
   /* =========================
-     TRUST / CARDS
+     TRUST GRID
   ========================= */
   .trust-grid {
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
+    flex-direction: column !important;
+    align-items: center !important;
   }
 
   .trust-item {
-    width: 100%;
-    max-width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   /* =========================
-     SERVICES PAGE
+     SERVICES (BIG FIX)
   ========================= */
   .service-row,
   .service-row.reverse {
     flex-direction: column !important;
-    gap: 25px;
     text-align: center;
+    gap: 25px !important;
   }
 
   .service-text {
-    width: 100%;
+    width: 100% !important;
   }
 
   .service-visual {
-    width: 100%;
-    height: 220px;
+    width: 100% !important;
+    height: 220px !important;
   }
 
   /* =========================
-     PROCESS
+     PROCESS FIX
   ========================= */
   .process-grid {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
+    flex-direction: column !important;
+    gap: 40px !important;
   }
 
-  .process-step {
-    max-width: 300px;
-    text-align: center;
+  .process-grid::before {
+    display: none !important;
   }
 
   /* =========================
-     PRICING
+     PRICING FIX
   ========================= */
   .pricing-grid {
-    flex-direction: column;
+    flex-direction: column !important;
     align-items: center;
-    gap: 25px;
   }
 
   .pricing-card {
-    width: 100%;
+    width: 100% !important;
     max-width: 400px;
   }
 
   /* =========================
-     SETUP SECTION
+     SETUP GRID
   ========================= */
   .setup-grid {
-    flex-direction: column;
+    flex-direction: column !important;
     align-items: center;
-    gap: 25px;
   }
 
   .setup-item {
-    width: 100%;
+    width: 100% !important;
   }
 
   /* =========================
-     ABOUT
+     ABOUT FIX
   ========================= */
   .about-grid {
-    flex-direction: column;
-    gap: 30px;
+    flex-direction: column !important;
+    gap: 30px !important;
   }
 
   .about-visual {
-    height: 220px;
+    height: 220px !important;
   }
 
   /* =========================
-     BOOKING / CONTACT
+     BOOKING / IFRAME FIX
   ========================= */
-  .booking-card {
-    margin: 30px auto;
-  }
-
-  .booking-title {
-    font-size: 18px;
-  }
-
   .booking-card iframe {
-    height: 85vh;
-    border: none;
+    height: 85vh !important;
   }
 
   /* =========================
-     FOOTER
+     FOOTER FIX
   ========================= */
   .footer-container {
-    flex-direction: column;
+    flex-direction: column !important;
     align-items: center;
-    gap: 40px;
     text-align: center;
   }
 
-  .footer-col {
-    text-align: center;
+  .footer-cta {
+    align-items: center !important;
   }
 
   /* =========================
-     BUTTONS
+     BUTTON FIX
   ========================= */
   .cta-btn {
     width: 100%;
-    max-width: 250px;
+    max-width: 260px;
     text-align: center;
   }
 
