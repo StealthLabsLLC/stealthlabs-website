@@ -327,7 +327,7 @@ section::after,
   backdrop-filter: blur(12px);
 
   border-top: 1px solid rgba(168, 85, 247, 0.2);
-  z-index: 2;
+  z-index: 1;
 }
 
 .footer-col {
@@ -1795,9 +1795,11 @@ a:hover {
 }
 
 .booking-card iframe {
+  position: relative;
   height: 65vh;                 /* 👈 forces scroll behavior */
   max-height: 600px;
   overflow: auto;
+  z-index: 9999;
 
   -webkit-overflow-scrolling: touch; /* smooth scroll on iPhone */
 }
