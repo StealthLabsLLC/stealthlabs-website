@@ -1794,6 +1794,15 @@ a:hover {
   color: #888;
 }
 
+.booking-card iframe {
+  height: 65vh;                 /* 👈 forces scroll behavior */
+  max-height: 600px;
+  overflow: auto;
+
+  -webkit-overflow-scrolling: touch; /* smooth scroll on iPhone */
+}
+
+
 /* TITLE */
 .setup-item h3 {
   font-size: 18px;
