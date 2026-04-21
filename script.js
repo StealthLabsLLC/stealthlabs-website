@@ -133,9 +133,23 @@ document.addEventListener("keydown", (e) => {
 });
 
 window.addEventListener("message", function(event) {
-  if (event.data && event.data.type === "iframeHeight") {
-    const iframe = document.getElementById("bookingFrame");
-    if (iframe) {
+  const iframe = document.getElementById("bookingFrame");
+
+  if (!iframe) return;
+
+  // GHL sends height updates — catch them ALL
+  if (event.data && typeof event.data === "object") {
+
+    // Handle multiple possible message formats
+    if (event.data.height) {
+      iframe.style.height = event.data.height + "px";
+    }
+
+    if (event.data.event === "setHeight") {
+      iframe.style.height = event.data.height + "px";
+    }
+
+    if (event.data.type === "iframeHeight") {
       iframe.style.height = event.data.height + "px";
     }
   }
