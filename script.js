@@ -143,25 +143,32 @@ window.addEventListener("load", () => {
 
 // Fade out on link click
 document.querySelectorAll("a:not([target='_blank'])").forEach(link => {
+
   link.addEventListener("click", function (e) {
 
-    // ignore external links
+    const href = this.getAttribute("href");
+
+    // Skip empty links
+    if (!href) return;
+
+    // Skip anchor links
+    if (href.includes("#")) return;
+
+    // Skip external links
     if (this.hostname !== window.location.hostname) return;
 
+    // Skip no-transition links
     if (this.classList.contains("no-transition")) return;
 
-    // ignore anchors
-    if (this.getAttribute("href").startsWith("#")) return;
-
     e.preventDefault();
-
-    const href = this.href;
 
     document.body.classList.remove("page-loaded");
     document.body.classList.add("page-exit");
 
     setTimeout(() => {
       window.location.href = href;
-    }, 150); // match CSS duration
+    }, 180);
+
   });
+
 });
